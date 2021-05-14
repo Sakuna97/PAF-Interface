@@ -38,8 +38,8 @@ public class ProjectsAPI extends HttpServlet {
 				 request.getParameter("projectName"),
 				 request.getParameter("projectPrice"), 
 				 request.getParameter("projectDesc"),
-				 request.getParameter("projectDevBy"),
-				 request.getParameter("projectCategory"));
+				 request.getParameter("projectBy"),
+				 request.getParameter("projectCtg"));
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
@@ -63,8 +63,8 @@ public class ProjectsAPI extends HttpServlet {
 				 			paras.get("projectName").toString(),
 				 			paras.get("projectPrice").toString(),
 				 			paras.get("projectDesc").toString(), 
-				 			paras.get("projectDevBy").toString(), 
-				 			paras.get("projectCategory").toString()); 
+				 			paras.get("projectBy").toString(), 
+				 			paras.get("projectCtg").toString()); 
 		 
 		response.getWriter().write(output);
 	}

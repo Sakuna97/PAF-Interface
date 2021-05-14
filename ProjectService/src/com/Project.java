@@ -44,7 +44,7 @@ public class Project {
 				 		String projectCtg = rs.getString("projectCtg"); 
 				 
 				 		// Add a row into the html table
-				 		output += "<tr><td>" + projectCode + "</td>"; 
+				 		output += "<tr><td><input id='hidProjectIDUpdate' name='hidProjectIDUpdate' type='hidden' value='" + projectID + "'>" + projectCode + "</td>";  
 				 		output += "<td>" + projectName + "</td>"; 
 				 		output += "<td>" + projectPrice + "</td>"; 
 				 		output += "<td>" + projectDesc + "</td>";
@@ -162,13 +162,15 @@ public class Project {
 	
 	public String deleteProject(String projectID) { 
 		 String output = ""; 
-		 try {
-		  
+		 try
+		 {
 			 	DB_Connection obj_DB_Connection= new DB_Connection();
 				Connection con = obj_DB_Connection.connect();
-			 if (con == null) {
+				
+			 if (con == null)
+			 {
 				 return "Error while connecting to the database for deleting."; 
-				 } 
+			 } 
 				 // create a prepared statement
 				 String query = "delete from projects where projectID=?"; 
 				 PreparedStatement preparedStmt = con.prepareStatement(query); 

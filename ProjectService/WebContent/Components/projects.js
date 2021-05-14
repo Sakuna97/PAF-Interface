@@ -44,13 +44,13 @@ $(document).on("click", "#btnSave", function(event)
 // UPDATE==========================================
 $(document).on("click", ".btnUpdate", function(event) 
 { 
-	 $("#hidItemIDSave").val($(this).data("projectID")); 
+	 $("#hidProjectIDSave").val($(this).data("projectID")); 
 	 $("#ProjectCode").val($(this).closest("tr").find('td:eq(0)').text()); 
 	 $("#ProjectName").val($(this).closest("tr").find('td:eq(1)').text());
-	 $("#ProjectPrice").val($(this).closest("tr").find('td:eq(4)').text());
-	 $("#ProjectDesc").val($(this).closest("tr").find('td:eq(2)').text());
-	 $("#ProjectDevBy").val($(this).closest("tr").find('td:eq(3)').text()); 
-	 $("#ProjectCategory").val($(this).closest("tr").find('td:eq(5)').text()); 
+	 $("#ProjectPrice").val($(this).closest("tr").find('td:eq(2)').text());
+	 $("#ProjectDesc").val($(this).closest("tr").find('td:eq(3)').text());
+	 $("#ProjectBy").val($(this).closest("tr").find('td:eq(4)').text()); 
+	 $("#ProjectCtg").val($(this).closest("tr").find('td:eq(5)').text()); 
 });
 
 //DELETE==========================================
@@ -108,13 +108,13 @@ function validateProjectForm()
 	 } 
 	 
 	  // DEVELOPEDBY------------------------
-	if ($("#projectDevBy").val().trim() == "") 
+	if ($("#projectBy").val().trim() == "") 
 	 { 
 	 	return "Insert Project Developed By."; 
 	 } 
 	 
 	 // CATEGORY------------------------
-	if ($("#projectCategory").val().trim() == "") 
+	if ($("#projectCtg").val().trim() == "") 
 	 { 
 	 	return "Insert Project Category."; 
 	 } 

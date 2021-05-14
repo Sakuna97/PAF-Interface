@@ -24,8 +24,8 @@
 					Project Name: <input id="projectName" name="projectName" type="text" class="form-control form-control-sm"><br>
 					Project price: <input id="projectPrice" name="projectPrice" type="text" class="form-control form-control-sm"><br>
 					Project Description: <input id="projectDesc" name="projectDesc" type="text" class="form-control form-control-sm"><br>
-					Project Developed By: <input id="projectDevBy" name="projectDevBy" type="text" class="form-control form-control-sm"><br>
-					Project Category: <input id="projectCategory" name="projectCategory" type="text" class="form-control form-control-sm"><br>
+					Project Developed By: <input id="projectBy" name="projectBy" type="text" class="form-control form-control-sm"><br>
+					Project Category: <input id="projectCtg" name="projectCtg" type="text" class="form-control form-control-sm"><br>
 					
 					<div id="alertSuccess" class="alert alert-success"></div>
 				 	<div id="alertError" class="alert alert-danger"></div>
