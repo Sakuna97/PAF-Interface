@@ -53,9 +53,9 @@ public class Project {
 				 
 				 		// buttons
 				 		output += "<td><input name='btnUpdate' type='button' value='Update' "
-								 + "class='btnUpdate btn btn-secondary' data-itemid='" + projectID + "'></td>"
+								 + "class='btnUpdate btn btn-secondary' data-projectID='" + projectID + "'></td>"
 								 + "<td><input name='btnRemove' type='button' value='Remove' "
-								 + "class='btnRemove btn btn-danger' data-itemid='" + projectID + "'></td></tr>";  
+								 + "class='btnRemove btn btn-danger' data-projectID='" + projectID + "'></td></tr>";  
 				 	} 
 				 	con.close(); 
 				 	// Complete the html table
