@@ -119,13 +119,7 @@ function validateItemForm()
 	// convert to decimal price
 	 $("#projectPrice").val(parseFloat(tmpPrice).toFixed(2)); 
 	 
-	// DESCRIPTION------------------------
-	if ($("#projectDesc").val().trim() == "") 
-	 { 
-	 	return "Insert Project Description."; 
-	 } 
-	 return true; 
-}
+	
 
 function onProjectSaveComplete(response, status)
 { 
