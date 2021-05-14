@@ -52,13 +52,10 @@ public class Project {
 				 		output += "<td>" + projectCtg + "</td>";
 				 
 				 		// buttons
-				 		output += "<td><input name='btnUpdate' " 
-				 				+ " type='button' value='Update'></td>"
-				 				+ "<td><form method='post' action=''>"
-				 				+ "<input name='btnRemove' " 
-				 				+ " type='submit' value='Remove'>"
-				 				+ "<input name='projectID' type='hidden' " 
-				 				+ " value='" + projectID + "'>" + "</form></td></tr>"; 
+				 		output += "<td><input name='btnUpdate' type='button' value='Update' "
+								 + "class='btnUpdate btn btn-secondary' data-itemid='" + projectID + "'></td>"
+								 + "<td><input name='btnRemove' type='button' value='Remove' "
+								 + "class='btnRemove btn btn-danger' data-itemid='" + projectID + "'></td></tr>";  
 				 	} 
 				 	con.close(); 
 				 	// Complete the html table

@@ -47,9 +47,9 @@ $(document).on("click", ".btnUpdate", function(event)
 	 $("#hidItemIDSave").val($(this).data("projectID")); 
 	 $("#ProjectCode").val($(this).closest("tr").find('td:eq(0)').text()); 
 	 $("#ProjectName").val($(this).closest("tr").find('td:eq(1)').text());
+	 $("#ProjectPrice").val($(this).closest("tr").find('td:eq(4)').text());
 	 $("#ProjectDesc").val($(this).closest("tr").find('td:eq(2)').text());
 	 $("#ProjectDevBy").val($(this).closest("tr").find('td:eq(3)').text()); 
-	 $("#ProjectPrice").val($(this).closest("tr").find('td:eq(4)').text()); 
 	 $("#ProjectCategory").val($(this).closest("tr").find('td:eq(5)').text()); 
 });
 
@@ -84,20 +84,8 @@ function validateProjectForm()
 	 { 
 	 	return "Insert Project Name."; 
 	 }
-	 
-	 // DESCRIPTION------------------------
-	if ($("#projectDesc").val().trim() == "") 
-	 { 
-	 	return "Insert Project Description."; 
-	 } 
-	 
-	  // DEVELOPEDBY------------------------
-	if ($("#projectDevBy").val().trim() == "") 
-	 { 
-	 	return "Insert Project Developed By."; 
-	 } 
-	 
-	 // PRICE-------------------------------
+	  
+	  // PRICE-------------------------------
 	if ($("#ProjectPrice").val().trim() == "") 
 	 { 
 	 	return "Insert Project Price."; 
@@ -112,6 +100,18 @@ function validateProjectForm()
 	 
 	// convert to decimal price
 	 $("#projectPrice").val(parseFloat(tmpPrice).toFixed(2)); 
+	 
+	  // DESCRIPTION------------------------
+	if ($("#projectDesc").val().trim() == "") 
+	 { 
+	 	return "Insert Project Description."; 
+	 } 
+	 
+	  // DEVELOPEDBY------------------------
+	if ($("#projectDevBy").val().trim() == "") 
+	 { 
+	 	return "Insert Project Developed By."; 
+	 } 
 	 
 	 // CATEGORY------------------------
 	if ($("#projectCategory").val().trim() == "") 

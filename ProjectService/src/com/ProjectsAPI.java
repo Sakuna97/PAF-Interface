@@ -36,9 +36,9 @@ public class ProjectsAPI extends HttpServlet {
 
 		String output = projectObj.insertProject(request.getParameter("projectCode"), 
 				 request.getParameter("projectName"),
+				 request.getParameter("projectPrice"), 
 				 request.getParameter("projectDesc"),
 				 request.getParameter("projectDevBy"),
-				 request.getParameter("projectPrice"), 
 				 request.getParameter("projectCategory"));
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
@@ -60,10 +60,10 @@ public class ProjectsAPI extends HttpServlet {
 		 
 		 String output = projectObj.updateProject(paras.get("hidProjectIDSave").toString(), 
 				 			paras.get("projectCode").toString(), 
-				 			paras.get("projectName").toString(), 
+				 			paras.get("projectName").toString(),
+				 			paras.get("projectPrice").toString(),
 				 			paras.get("projectDesc").toString(), 
-				 			paras.get("itemDevBy").toString(),
-				 			paras.get("projectPrice").toString(), 
+				 			paras.get("projectDevBy").toString(), 
 				 			paras.get("projectCategory").toString()); 
 		 
 		response.getWriter().write(output);

@@ -22,9 +22,9 @@
 				<form id="formProject" name="formProject" method="post" action="Projects.jsp">
 					Project Code: <input id="projectCode" name="projectCode" type="text" class="form-control form-control-sm"><br>
 					Project Name: <input id="projectName" name="projectName" type="text" class="form-control form-control-sm"><br>
+					Project price: <input id="projectPrice" name="projectPrice" type="text" class="form-control form-control-sm"><br>
 					Project Description: <input id="projectDesc" name="projectDesc" type="text" class="form-control form-control-sm"><br>
 					Project Developed By: <input id="projectDevBy" name="projectDevBy" type="text" class="form-control form-control-sm"><br>
-					Project price: <input id="projectPrice" name="projectPrice" type="text" class="form-control form-control-sm"><br>
 					Project Category: <input id="projectCategory" name="projectCategory" type="text" class="form-control form-control-sm"><br>
 					
 					<div id="alertSuccess" class="alert alert-success"></div>
