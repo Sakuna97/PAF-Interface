@@ -40,6 +40,7 @@ public class ProjectsAPI extends HttpServlet {
 				 request.getParameter("projectDesc"),
 				 request.getParameter("projectBy"),
 				 request.getParameter("projectCtg"));
+		
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
@@ -79,6 +80,7 @@ public class ProjectsAPI extends HttpServlet {
 		 
 		 response.getWriter().write(output);
 	}
+	
 	private static Map getParasMap(HttpServletRequest request) 
 	{ 
 		Map<String, String> map = new HashMap<String, String>(); 

@@ -19,7 +19,7 @@
  			<div class="col-6">
  				<h1>Items Management v10</h1>
  				
-				<form id="formProject" name="formProject" method="post" action="Projects.jsp">
+				<form id="formProject" name="formProject" method="post" action="projects.jsp">
 					Project Code: <input id="projectCode" name="projectCode" type="text" class="form-control form-control-sm"><br>
 					Project Name: <input id="projectName" name="projectName" type="text" class="form-control form-control-sm"><br>
 					Project price: <input id="projectPrice" name="projectPrice" type="text" class="form-control form-control-sm"><br>

@@ -44,7 +44,7 @@ $(document).on("click", "#btnSave", function(event)
 // UPDATE==========================================
 $(document).on("click", ".btnUpdate", function(event) 
 { 
-	 $("#hidProjectIDSave").val($(this).data("projectID")); 
+	 $("#hidProjectIDSave").val($(this).data("projectid")); 
 	 $("#ProjectCode").val($(this).closest("tr").find('td:eq(0)').text()); 
 	 $("#ProjectName").val($(this).closest("tr").find('td:eq(1)').text());
 	 $("#ProjectPrice").val($(this).closest("tr").find('td:eq(2)').text());
@@ -60,7 +60,7 @@ $(document).on("click", ".btnRemove", function(event)
  	{ 
  		url : "ProjectsAPI", 
  		type : "DELETE", 
- 		data : "projectID=" + $(this).data("projectID"),
+ 		data : "projectID=" + $(this).data("projectid"),
  		dataType : "text", 
  		complete : function(response, status) 
  		{ 
@@ -162,12 +162,14 @@ function onProjectDeleteComplete(response, status)
  		{ 
  			$("#alertSuccess").text("Successfully deleted."); 
  			$("#alertSuccess").show(); 
+ 			
  			$("#divProjectsGrid").html(resultSet.data); 
  		} else if (resultSet.status.trim() == "error") 
  		{ 
  			$("#alertError").text(resultSet.data); 
  			$("#alertError").show(); 
- 		} 
+ 		}
+ 		 
  	} else if (status == "error") 
  	{ 
  			$("#alertError").text("Error while deleting."); 
