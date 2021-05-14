@@ -44,13 +44,13 @@ $(document).on("click", "#btnSave", function(event)
 // UPDATE==========================================
 $(document).on("click", ".btnUpdate", function(event) 
 { 
-	 $("#hidProjectIDSave").val($(this).data("projectID")); 
-	 $("#projectCode").val($(this).closest("tr").find('td:eq(0)').text()); 
-	 $("#projectName").val($(this).closest("tr").find('td:eq(1)').text());
-	 $("#projectDesc").val($(this).closest("tr").find('td:eq(2)').text()); 
-	 $("#projectDevBy").val($(this).closest("tr").find('td:eq(3)').text());   
-	 $("#projectPrice").val($(this).closest("tr").find('td:eq(4)').text()); 
-	 $("#projectCategory").val($(this).closest("tr").find('td:eq(5)').text()); 
+	 $("#hidItemIDSave").val($(this).data("projectID")); 
+	 $("#ProjectCode").val($(this).closest("tr").find('td:eq(0)').text()); 
+	 $("#ProjectName").val($(this).closest("tr").find('td:eq(1)').text());
+	 $("#ProjectDesc").val($(this).closest("tr").find('td:eq(2)').text());
+	 $("#ProjectDevBy").val($(this).closest("tr").find('td:eq(3)').text()); 
+	 $("#ProjectPrice").val($(this).closest("tr").find('td:eq(4)').text()); 
+	 $("#ProjectCategory").val($(this).closest("tr").find('td:eq(5)').text()); 
 });
 
 //DELETE==========================================
@@ -60,7 +60,7 @@ $(document).on("click", ".btnRemove", function(event)
  	{ 
  		url : "ProjectsAPI", 
  		type : "DELETE", 
- 		data : "projectdID=" + $(this).data("projectID"),
+ 		data : "projectID=" + $(this).data("projectID"),
  		dataType : "text", 
  		complete : function(response, status) 
  		{ 
@@ -71,46 +71,40 @@ $(document).on("click", ".btnRemove", function(event)
 
 
 // CLIENT-MODEL================================================================
-function validateItemForm() 
+function validateProjectForm() 
 { 
 	// CODE
-	if ($("#projectCode").val().trim() == "") 
+	if ($("#ProjectCode").val().trim() == "") 
 	 { 
 	 	return "Insert Project Code."; 
 	 } 
 	 
 	// NAME
-	if ($("#projectName").val().trim() == "") 
+	if ($("#ProjectName").val().trim() == "") 
 	 { 
 	 	return "Insert Project Name."; 
 	 }
 	 
-	 // DESCRIPTION
+	 // DESCRIPTION------------------------
 	if ($("#projectDesc").val().trim() == "") 
 	 { 
 	 	return "Insert Project Description."; 
 	 } 
 	 
-	 // DEVELOPEDBY
+	  // DEVELOPEDBY------------------------
 	if ($("#projectDevBy").val().trim() == "") 
 	 { 
 	 	return "Insert Project Developed By."; 
 	 } 
 	 
-	 // PRICE
-	if ($("#projectPrice").val().trim() == "") 
+	 // PRICE-------------------------------
+	if ($("#ProjectPrice").val().trim() == "") 
 	 { 
 	 	return "Insert Project Price."; 
 	 } 
 	 
-	 // CATERGORY
-	if ($("#projectCategory").val().trim() == "") 
-	 { 
-	 	return "Insert Project Category."; 
-	 } 
-	 
 	// is numerical value
-	var tmpPrice = $("#projectPrice").val().trim(); 
+	var tmpPrice = $("#ProjectPrice").val().trim(); 
 	if (!$.isNumeric(tmpPrice)) 
 	 { 
 	 	return "Insert a numerical value for Project Price."; 
@@ -119,7 +113,12 @@ function validateItemForm()
 	// convert to decimal price
 	 $("#projectPrice").val(parseFloat(tmpPrice).toFixed(2)); 
 	 
-	
+	 // CATEGORY------------------------
+	if ($("#projectCategory").val().trim() == "") 
+	 { 
+	 	return "Insert Project Category."; 
+	 } 
+}
 
 function onProjectSaveComplete(response, status)
 { 
@@ -168,13 +167,13 @@ function onProjectDeleteComplete(response, status)
  			$("#alertError").text(resultSet.data); 
  			$("#alertError").show(); 
  		} 
- 		} else if (status == "error") 
- 		{ 
+ 	} else if (status == "error") 
+ 	{ 
  			$("#alertError").text("Error while deleting."); 
  			$("#alertError").show(); 
- 		} else
- 		{ 
+ 	} else
+ 	{ 
  			$("#alertError").text("Unknown error while deleting.."); 
  			$("#alertError").show(); 
- 		} 
+ 	} 
 }

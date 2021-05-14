@@ -10,7 +10,7 @@
 
 <link rel="stylesheet" href="Views/bootstrap.min.css">
 <script src="Components/jquery-3.2.1.min.js"></script>
-<script src="Components/items.js"></script>
+<script src="Components/projects.js"></script>
 
 </head>
 <body>
@@ -40,10 +40,10 @@
 				<div id="alertError" class="alert alert-danger"></div>
 				
 				<br>
-				<div id="divItemsGrid">
+				<div id="divProjectsGrid">
 					 <%
-						 Project itemObj = new Project(); 
-					 	 out.print(itemObj.readProjects()); 
+						 Project projectObj = new Project(); 
+					 	 out.print(projectObj.readProjects()); 
 					 %>
 				</div>
 
