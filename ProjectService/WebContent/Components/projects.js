@@ -101,13 +101,13 @@ function validateProjectForm()
 	// convert to decimal price
 	 $("#projectPrice").val(parseFloat(tmpPrice).toFixed(2)); 
 	 
-	  // DESCRIPTION------------------------
+	// DESCRIPTION------------------------
 	if ($("#projectDesc").val().trim() == "") 
 	 { 
 	 	return "Insert Project Description."; 
 	 } 
 	 
-	  // DEVELOPEDBY------------------------
+	// DEVELOPEDBY------------------------
 	if ($("#projectBy").val().trim() == "") 
 	 { 
 	 	return "Insert Project Developed By."; 
@@ -118,6 +118,7 @@ function validateProjectForm()
 	 { 
 	 	return "Insert Project Category."; 
 	 } 
+	 return true;
 }
 
 function onProjectSaveComplete(response, status)
