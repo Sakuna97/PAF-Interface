@@ -17,7 +17,7 @@
 	<div class="container">
  		<div class="row">
  			<div class="col-6">
- 				<h1>Items Management v10</h1>
+ 				<h1>Project Management</h1>
  				
 				<form id="formProject" name="formProject" method="post" action="projects.jsp">
 					Project Code: <input id="projectCode" name="projectCode" type="text" class="form-control form-control-sm"><br>
@@ -34,10 +34,6 @@
 					<input type="hidden" id="hidProjectIDSave" name="hidProjectIDSave" value="">
 					
 				</form>
-	
-				
-				<div id="alertSuccess" class="alert alert-success"></div>
-				<div id="alertError" class="alert alert-danger"></div>
 				
 				<br>
 				<div id="divProjectsGrid">

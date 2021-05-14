@@ -17,7 +17,7 @@ $(document).on("click", "#btnSave", function(event)
  	$("#alertError").hide();
  	 
 	// Form validation-------------------
-	var status = validateProjectForm(); 
+	var status =validateProjectForm() 
 	if (status != true) 
  	{ 
  		$("#alertError").text(status); 
@@ -45,12 +45,12 @@ $(document).on("click", "#btnSave", function(event)
 $(document).on("click", ".btnUpdate", function(event) 
 { 
 	 $("#hidProjectIDSave").val($(this).data("projectid")); 
-	 $("#ProjectCode").val($(this).closest("tr").find('td:eq(0)').text()); 
-	 $("#ProjectName").val($(this).closest("tr").find('td:eq(1)').text());
-	 $("#ProjectPrice").val($(this).closest("tr").find('td:eq(2)').text());
-	 $("#ProjectDesc").val($(this).closest("tr").find('td:eq(3)').text());
-	 $("#ProjectBy").val($(this).closest("tr").find('td:eq(4)').text()); 
-	 $("#ProjectCtg").val($(this).closest("tr").find('td:eq(5)').text()); 
+	 $("#projectCode").val($(this).closest("tr").find('td:eq(0)').text()); 
+	 $("#projectName").val($(this).closest("tr").find('td:eq(1)').text());
+	 $("#projectPrice").val($(this).closest("tr").find('td:eq(2)').text());
+	 $("#projectDesc").val($(this).closest("tr").find('td:eq(3)').text());
+	 $("#projectBy").val($(this).closest("tr").find('td:eq(4)').text()); 
+	 $("#projectCtg").val($(this).closest("tr").find('td:eq(5)').text()); 
 });
 
 //DELETE==========================================
@@ -74,25 +74,25 @@ $(document).on("click", ".btnRemove", function(event)
 function validateProjectForm() 
 { 
 	// CODE
-	if ($("#ProjectCode").val().trim() == "") 
+	if ($("#projectCode").val().trim() == "") 
 	 { 
 	 	return "Insert Project Code."; 
 	 } 
 	 
 	// NAME
-	if ($("#ProjectName").val().trim() == "") 
+	if ($("#projectName").val().trim() == "") 
 	 { 
 	 	return "Insert Project Name."; 
 	 }
 	  
 	  // PRICE-------------------------------
-	if ($("#ProjectPrice").val().trim() == "") 
+	if ($("#projectPrice").val().trim() == "") 
 	 { 
 	 	return "Insert Project Price."; 
 	 } 
 	 
 	// is numerical value
-	var tmpPrice = $("#ProjectPrice").val().trim(); 
+	var tmpPrice = $("#projectPrice").val().trim(); 
 	if (!$.isNumeric(tmpPrice)) 
 	 { 
 	 	return "Insert a numerical value for Project Price."; 

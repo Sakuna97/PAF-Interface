@@ -44,7 +44,7 @@ public class Project {
 				 		String projectCtg = rs.getString("projectCtg"); 
 				 
 				 		// Add a row into the html table
-				 		output += "<tr><td><input id='hidProjectIDUpdate' name='hidProjectIDUpdate' type='hidden' value='" + projectID + "'>" + projectCode + "</td>";  
+				 		output += "<tr><td><input id='hidProjectIDUpdate' type='hidden' value='" + projectID + "'>" + projectCode + "</td>";  
 				 		output += "<td>" + projectName + "</td>"; 
 				 		output += "<td>" + projectPrice + "</td>"; 
 				 		output += "<td>" + projectDesc + "</td>";
@@ -53,7 +53,7 @@ public class Project {
 				 
 				 		// buttons
 				 		output += "<td><input name='btnUpdate' type='button' value='Update' "
-								 + "class='btnUpdate btn btn-secondary' data-itemid='" + projectID + "'></td>"
+								 + "class='btnUpdate btn btn-secondary' data-projectid='" + projectID + "'></td>"
 								 + "<td><input name='btnRemove' type='button' value='Remove' "
 								 + "class='btnRemove btn btn-danger' data-projectid='" + projectID + "'></td></tr>";  
 				 	} 
@@ -104,8 +104,7 @@ public class Project {
 			 	con.close(); 
 			 
 			 	String newProjects = readProjects(); 
-				 output = "{\"status\":\"success\", \"data\": \"" + 
-				 newProjects + "\"}"; 
+				 output = "{\"status\":\"success\", \"data\": \"" + newProjects + "\"}"; 
 		 	} 
 		
 			catch (Exception e){ 
@@ -147,8 +146,7 @@ public class Project {
 				 con.close(); 
 				 
 				 String newProjects = readProjects(); 
-				 output = "{\"status\":\"success\", \"data\": \"" + 
-				 newProjects + "\"}"; 
+				 output = "{\"status\":\"success\", \"data\": \"" + newProjects + "\"}"; 
 		 } 
 		 catch (Exception e) {
 		  
@@ -183,8 +181,7 @@ public class Project {
 				 con.close(); 
 				 
 				 String newProjects = readProjects(); 
-				 output = "{\"status\":\"success\", \"data\": \"" + 
-				 newProjects + "\"}"; 
+				 output = "{\"status\":\"success\", \"data\": \"" + newProjects + "\"}"; 
 		 } 
 		 catch (Exception e) {
 		  
